@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cm to inches converter </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body id="body">
+    
+   <div class="box"><h1>cm to inches</h1>
+   
+   <div class="write">
+   <input type="text" id="input" placeholder="length cm to inches">
+
+<button type="submit" onclick="convert()">Convert cm to inches</button>
+<div id="result"></div>
+</div>
+</div>
+   <script>
+    function convert(){
+let cmVal = Number(document.getElementById("input").value)
+let inchVal = cmVal/2.54
+let result = document.getElementById("result")
+result.innerHTML = inchVal.toFixed(2)+"inches"// to fixed(2) for show me a 2 digit decimal only..
+    }
+    </script>
+</body>
+</html>
